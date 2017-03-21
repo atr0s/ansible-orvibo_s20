@@ -1,0 +1,6 @@
+- hosts: localhost
+  tasks:
+    - name: turning on socket
+      orvibo_s20:
+        address: 10.0.0.10
+        state: on

@@ -1,0 +1,9 @@
+- hosts: localhost
+  tasks:
+    - name: testing
+      orvibo_s20:
+      register: r
+
+    - name: debugging
+      debug:
+        var: r

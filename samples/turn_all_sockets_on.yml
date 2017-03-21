@@ -1,0 +1,12 @@
+- hosts: localhost
+  tasks:
+    - name: finding sockets
+      orvibo_s20:
+      register: r
+
+    - name: turning socket on
+      orvibo_s20:
+        address: "{{ item }}"
+        state: on
+      with_items: "{{ r['sockets'] }}"
+      register: r
